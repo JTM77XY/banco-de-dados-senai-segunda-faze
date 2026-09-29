@@ -59,6 +59,8 @@ VALUES
 ('bilu', '2002-03-10', 1112223334),
 ('babi', '2010-01-10', 1112223335);
 
+SELECT * FROM  aluno;
+
 INSERT INTO disciplina
 (nome, qtd_creditos)
 VALUES
@@ -67,3 +69,45 @@ VALUES
 ('história', 15 ),
 ('programação', 10 ),
 ('geografia', 5 );
+
+SELECT * FROM  disciplina;
+
+
+INSERT INTO turma
+(turno, disciplina_id)
+VALUES
+('nortuno', 1 ),
+('matutino', 2 ),
+('vespetino', 3 ),
+('noturno', 4 ),
+('matutino', 5 );
+
+SELECT * FROM  turma;
+
+
+INSERT INTO inscricao
+( dt_incricao, aluno_id, turma_id)
+VALUES
+('2024-01-01', 4 , 1),
+('2024-01-01', 3 , 2),
+('2024-01-01', 2 , 3),
+('2024-06-01', 4 , 1),
+('2024-06-01', 3 , 2),
+('2024-06-01', 2 , 3),
+('2024-06-01' , null , null );
+
+SELECT * FROM  inscricao;
+
+INSERT INTO mensalidade
+( dt_vencimento, valor, status_pagamento, inscricao_id)
+VALUES
+('2024-01-05', 600 , 'pago' , 8),
+('2024-01-05', 600 , 'pago', 9),
+('2024-01-05', 600 , 'pago' , 10),
+('2024-06-05', 700 , 'não pago' , 11),
+('2024-06-05', 700 , 'não pago' , 12),
+('2024-06-05', 700 , 'não pago' , 13);
+
+
+SELECT * FROM  mensalidade;
+
